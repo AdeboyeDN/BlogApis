@@ -17,7 +17,7 @@ class blog(models.Model):
         ordering = ['-date']
 
     def get_absolute_url(self):
-        return reverse("detail", kwargs={ "slug": self.slug, "pk": self.pk})
+        return reverse("detailview", kwargs={"slug": self.slug, "pk":self.pk })
     
     
     def __str__(self):
